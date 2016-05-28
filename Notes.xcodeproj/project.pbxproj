@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC63B6901CF6CAFF00975571 /* AttachmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC63B68E1CF6CAFF00975571 /* AttachmentCell.swift */; };
+		EC63B6911CF6CAFF00975571 /* AttachmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC63B68F1CF6CAFF00975571 /* AttachmentCell.xib */; };
 		ECC1711D1CF5B01600ECAADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1711C1CF5B01600ECAADA /* AppDelegate.swift */; };
 		ECC1711F1CF5B01600ECAADA /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1711E1CF5B01600ECAADA /* Document.swift */; };
 		ECC171221CF5B01600ECAADA /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC171201CF5B01600ECAADA /* Document.xib */; };
@@ -14,6 +16,8 @@
 		ECC171271CF5B01600ECAADA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC171251CF5B01600ECAADA /* MainMenu.xib */; };
 		ECC171321CF5B01600ECAADA /* NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC171311CF5B01600ECAADA /* NotesTests.swift */; };
 		ECC1713D1CF5B01600ECAADA /* NotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1713C1CF5B01600ECAADA /* NotesUITests.swift */; };
+		ECF4C58C1CF95C4000A1D4AB /* AddAttachmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF4C58A1CF95C4000A1D4AB /* AddAttachmentViewController.swift */; };
+		ECF4C58D1CF95C4000A1D4AB /* AddAttachmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECF4C58B1CF95C4000A1D4AB /* AddAttachmentViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC63B68E1CF6CAFF00975571 /* AttachmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentCell.swift; sourceTree = "<group>"; };
+		EC63B68F1CF6CAFF00975571 /* AttachmentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttachmentCell.xib; sourceTree = "<group>"; };
 		ECC171191CF5B01600ECAADA /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC1711C1CF5B01600ECAADA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECC1711E1CF5B01600ECAADA /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
@@ -47,6 +53,8 @@
 		ECC171381CF5B01600ECAADA /* NotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC1713C1CF5B01600ECAADA /* NotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesUITests.swift; sourceTree = "<group>"; };
 		ECC1713E1CF5B01600ECAADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECF4C58A1CF95C4000A1D4AB /* AddAttachmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAttachmentViewController.swift; sourceTree = "<group>"; };
+		ECF4C58B1CF95C4000A1D4AB /* AddAttachmentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAttachmentViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,10 @@
 				ECC1711C1CF5B01600ECAADA /* AppDelegate.swift */,
 				ECC1711E1CF5B01600ECAADA /* Document.swift */,
 				ECC171201CF5B01600ECAADA /* Document.xib */,
+				ECF4C58A1CF95C4000A1D4AB /* AddAttachmentViewController.swift */,
+				ECF4C58B1CF95C4000A1D4AB /* AddAttachmentViewController.xib */,
+				EC63B68E1CF6CAFF00975571 /* AttachmentCell.swift */,
+				EC63B68F1CF6CAFF00975571 /* AttachmentCell.xib */,
 				ECC171231CF5B01600ECAADA /* Assets.xcassets */,
 				ECC171251CF5B01600ECAADA /* MainMenu.xib */,
 				ECC171281CF5B01600ECAADA /* Info.plist */,
@@ -229,6 +241,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC63B6911CF6CAFF00975571 /* AttachmentCell.xib in Resources */,
+				ECF4C58D1CF95C4000A1D4AB /* AddAttachmentViewController.xib in Resources */,
 				ECC171241CF5B01600ECAADA /* Assets.xcassets in Resources */,
 				ECC171221CF5B01600ECAADA /* Document.xib in Resources */,
 				ECC171271CF5B01600ECAADA /* MainMenu.xib in Resources */,
@@ -256,8 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC63B6901CF6CAFF00975571 /* AttachmentCell.swift in Sources */,
 				ECC1711F1CF5B01600ECAADA /* Document.swift in Sources */,
 				ECC1711D1CF5B01600ECAADA /* AppDelegate.swift in Sources */,
+				ECF4C58C1CF95C4000A1D4AB /* AddAttachmentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +503,7 @@
 				ECC171431CF5B01600ECAADA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ECC171441CF5B01600ECAADA /* Build configuration list for PBXNativeTarget "NotesTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +512,7 @@
 				ECC171461CF5B01600ECAADA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ECC171471CF5B01600ECAADA /* Build configuration list for PBXNativeTarget "NotesUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +521,7 @@
 				ECC171491CF5B01600ECAADA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

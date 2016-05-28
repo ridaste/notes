@@ -7,7 +7,6 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="Document" customModule="Notes" customModuleProvider="target">
             <connections>
-                <outlet property="attachmentsList" destination="arw-3D-tKn" id="3Tm-1q-s5J"/>
                 <outlet property="window" destination="xOd-HO-29H" id="JIz-fz-R2o"/>
             </connections>
         </customObject>
@@ -18,7 +17,7 @@
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="133" y="235" width="507" height="413"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1080"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <value key="minSize" type="size" width="94" height="86"/>
             <view key="contentView" id="gIp-Ho-8D9">
                 <rect key="frame" x="0.0" y="0.0" width="507" height="413"/>
@@ -65,10 +64,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="411" height="94"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    <connections>
-                                        <outlet property="dataSource" destination="-2" id="dcU-t1-KX5"/>
-                                        <outlet property="delegate" destination="-2" id="DV2-ws-6JQ"/>
-                                    </connections>
                                 </collectionView>
                             </subviews>
                         </clipView>
@@ -81,32 +76,16 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="35S-vS-nmz">
-                        <rect key="frame" x="455" y="19" width="32" height="34"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="32" id="Pjd-6A-VVd"/>
-                            <constraint firstAttribute="height" constant="32" id="XBE-YM-DNf"/>
-                        </constraints>
-                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qll-oU-gef">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="addAttachment:" target="-2" id="0OS-nZ-guJ"/>
-                        </connections>
-                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="2Mg-ff-qF5" firstAttribute="leading" secondItem="gIp-Ho-8D9" secondAttribute="leading" constant="20" symbolic="YES" id="7Br-Ou-FdQ"/>
-                    <constraint firstItem="2Mg-ff-qF5" firstAttribute="trailing" secondItem="35S-vS-nmz" secondAttribute="trailing" id="9zq-Fb-r3K"/>
-                    <constraint firstItem="eV5-Wj-JY4" firstAttribute="top" secondItem="2Mg-ff-qF5" secondAttribute="bottom" constant="8" symbolic="YES" id="BJZ-nC-jcq"/>
-                    <constraint firstAttribute="bottom" secondItem="eV5-Wj-JY4" secondAttribute="bottom" constant="20" symbolic="YES" id="JkS-GQ-4Ic"/>
-                    <constraint firstItem="35S-vS-nmz" firstAttribute="top" secondItem="2Mg-ff-qF5" secondAttribute="bottom" constant="72" id="Jvd-mh-uGb"/>
-                    <constraint firstItem="2Mg-ff-qF5" firstAttribute="top" secondItem="gIp-Ho-8D9" secondAttribute="top" constant="20" symbolic="YES" id="Khu-Uh-Sh3"/>
-                    <constraint firstItem="eV5-Wj-JY4" firstAttribute="bottom" secondItem="35S-vS-nmz" secondAttribute="bottom" id="SC6-5T-vkh"/>
-                    <constraint firstItem="35S-vS-nmz" firstAttribute="leading" secondItem="eV5-Wj-JY4" secondAttribute="trailing" constant="22" id="UQz-fZ-B0f"/>
-                    <constraint firstItem="2Mg-ff-qF5" firstAttribute="leading" secondItem="eV5-Wj-JY4" secondAttribute="leading" id="cKr-8X-MNT"/>
-                    <constraint firstAttribute="trailing" secondItem="2Mg-ff-qF5" secondAttribute="trailing" constant="20" symbolic="YES" id="go9-zR-OdQ"/>
+                    <constraint firstAttribute="bottom" secondItem="eV5-Wj-JY4" secondAttribute="bottom" constant="20" symbolic="YES" id="1Tt-RM-jw0"/>
+                    <constraint firstItem="eV5-Wj-JY4" firstAttribute="top" secondItem="2Mg-ff-qF5" secondAttribute="bottom" constant="8" symbolic="YES" id="28t-yt-SYf"/>
+                    <constraint firstItem="2Mg-ff-qF5" firstAttribute="leading" secondItem="gIp-Ho-8D9" secondAttribute="leading" constant="20" symbolic="YES" id="AKj-UN-Bft"/>
+                    <constraint firstItem="eV5-Wj-JY4" firstAttribute="top" secondItem="gIp-Ho-8D9" secondAttribute="top" constant="297" id="GFd-AQ-KfI"/>
+                    <constraint firstAttribute="trailing" secondItem="2Mg-ff-qF5" secondAttribute="trailing" constant="20" symbolic="YES" id="JbG-Ru-D8k"/>
+                    <constraint firstItem="2Mg-ff-qF5" firstAttribute="top" secondItem="gIp-Ho-8D9" secondAttribute="top" constant="20" symbolic="YES" id="RxN-TN-KuG"/>
+                    <constraint firstAttribute="trailing" secondItem="eV5-Wj-JY4" secondAttribute="trailing" constant="74" id="jLe-31-2h3"/>
+                    <constraint firstItem="2Mg-ff-qF5" firstAttribute="leading" secondItem="eV5-Wj-JY4" secondAttribute="leading" id="mJG-yn-n7N"/>
                 </constraints>
             </view>
             <connections>
@@ -115,7 +94,4 @@
         </window>
         <userDefaultsController representsSharedInstance="YES" id="tGi-pu-cmv"/>
     </objects>
-    <resources>
-        <image name="NSAddTemplate" width="11" height="11"/>
-    </resources>
 </document>
