@@ -33,6 +33,8 @@ extension NSFileWrapper {
     }
 }
 
+// another extension is going in here
+
 enum NoteDocumentFileNames : String {
     // Names of files/directories in the package
     case TextFile = "Text.rtf"
