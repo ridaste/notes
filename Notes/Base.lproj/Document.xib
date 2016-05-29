@@ -61,9 +61,12 @@
                             <rect key="frame" x="1" y="1" width="411" height="94"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <collectionView id="arw-3D-tKn">
+                                <collectionView selectable="YES" id="arw-3D-tKn">
                                     <rect key="frame" x="0.0" y="0.0" width="411" height="94"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="Uvh-Vo-v5N">
+                                        <size key="itemSize" width="100" height="100"/>
+                                    </collectionViewFlowLayout>
                                     <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <connections>
                                         <outlet property="dataSource" destination="-2" id="dcU-t1-KX5"/>
@@ -113,7 +116,6 @@
                 <outlet property="delegate" destination="-2" id="0bl-1N-x8E"/>
             </connections>
         </window>
-        <userDefaultsController representsSharedInstance="YES" id="tGi-pu-cmv"/>
     </objects>
     <resources>
         <image name="NSAddTemplate" width="11" height="11"/>

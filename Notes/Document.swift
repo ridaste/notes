@@ -33,7 +33,52 @@ extension NSFileWrapper {
     }
 }
 
-// another extension is going in here
+extension Document : AddAttachmentDelegate {
+    
+    func addFile() {
+        
+        let panel = NSOpenPanel()
+        
+        panel.allowsMultipleSelection = false
+        panel.canChooseDirectories = false
+        panel.canChooseFiles = true
+        
+        panel.beginWithCompletionHandler { (result) -> Void in
+            if result == NSModalResponseOK, let resultURL = panel.URLs.first {
+                do {
+                    try
+                        self.addAttachmentAtURL(resultURL)
+                        self.attachmentsList?.reloadData()
+                } catch let error as NSError {
+                    if let window = self.windowForSheet {
+                        NSApp.presentError(error, modalForWindow: window, delegate: nil, didPresentSelector: nil, contextInfo: nil)
+                    } else {
+                        NSApp.presentError(error)
+                    }
+                }
+            }
+        }
+    }
+}
+
+extension Document : NSCollectionViewDataSource {
+    
+    func collectionView(collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.attachedFiles?.count ?? 0
+    }
+    
+    func collectionView(collectionView: NSCollectionView, itemForRepresentedObjectAtIndexPath indexPath: NSIndexPath) -> NSCollectionViewItem {
+        
+        let attachment = self.attachedFiles![indexPath.item]
+        
+        let item = collectionView.makeItemWithIdentifier("AttachmentCell", forIndexPath: indexPath) as! AttachmentCell
+        
+        item.imageView?.image = attachment.thumbnailImage
+        item.textField?.stringValue = attachment.fileExtension ?? ""
+        
+        return item
+    }
+}
 
 enum NoteDocumentFileNames : String {
     // Names of files/directories in the package
@@ -152,6 +197,9 @@ class Document: NSDocument {
     @IBAction func addAttachment(sender: NSButton) {
         
         if let viewController = AddAttachmentViewController(nibName: "AddAttachmentViewController", bundle: NSBundle.mainBundle()) {
+            
+            viewController.delegate = self
+            
             self.popover = NSPopover()
             self.popover?.behavior = .Transient
             self.popover?.contentViewController = viewController
