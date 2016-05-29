@@ -13,19 +13,16 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="295" height="272"/>
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m5b-1F-3CC">
-                    <rect key="frame" x="20" y="66" width="255" height="186"/>
+                    <rect key="frame" x="20" y="42" width="60" height="38"/>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="hrt-lv-5Sy"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="O2R-QI-3T7">
-                    <rect key="frame" x="18" y="20" width="259" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="odn-pl-wJl"/>
-                    </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="qA2-1b-nwR">
+                    <rect key="frame" x="26" y="17" width="48" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="qA2-1b-nwR">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -33,15 +30,15 @@
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="m5b-1F-3CC" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" symbolic="YES" id="6Su-Kv-V5s"/>
-                <constraint firstAttribute="bottom" secondItem="O2R-QI-3T7" secondAttribute="bottom" constant="20" symbolic="YES" id="InO-V2-jhF"/>
-                <constraint firstItem="m5b-1F-3CC" firstAttribute="trailing" secondItem="O2R-QI-3T7" secondAttribute="trailing" id="Nud-Zd-dYo"/>
-                <constraint firstItem="m5b-1F-3CC" firstAttribute="leading" secondItem="O2R-QI-3T7" secondAttribute="leading" id="Oqm-ut-fYw"/>
-                <constraint firstItem="O2R-QI-3T7" firstAttribute="top" secondItem="m5b-1F-3CC" secondAttribute="bottom" constant="16" id="QCT-rd-H3m"/>
-                <constraint firstAttribute="trailing" secondItem="m5b-1F-3CC" secondAttribute="trailing" constant="20" symbolic="YES" id="RnT-Ox-SBu"/>
-                <constraint firstItem="m5b-1F-3CC" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="jIL-d7-kH7"/>
+                <constraint firstItem="m5b-1F-3CC" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" symbolic="YES" id="Qoi-1Z-QDO"/>
+                <constraint firstAttribute="bottom" secondItem="O2R-QI-3T7" secondAttribute="bottom" constant="17" id="cta-U4-aaO"/>
+                <constraint firstItem="O2R-QI-3T7" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="28" id="fUo-1i-gMz"/>
+                <constraint firstAttribute="trailing" secondItem="m5b-1F-3CC" secondAttribute="trailing" constant="20" symbolic="YES" id="j79-0K-CDt"/>
+                <constraint firstItem="m5b-1F-3CC" firstAttribute="centerX" secondItem="O2R-QI-3T7" secondAttribute="centerX" id="kVc-CX-GpX"/>
+                <constraint firstItem="m5b-1F-3CC" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="lZ8-IZ-cXy"/>
+                <constraint firstItem="O2R-QI-3T7" firstAttribute="top" secondItem="m5b-1F-3CC" secondAttribute="bottom" constant="8" symbolic="YES" id="snn-n6-ZSz"/>
             </constraints>
-            <point key="canvasLocation" x="633.5" y="508"/>
+            <point key="canvasLocation" x="633" y="508"/>
         </customView>
         <collectionViewItem id="Dfo-c1-cfR" customClass="AttachmentCell" customModule="Notes" customModuleProvider="target">
             <connections>
