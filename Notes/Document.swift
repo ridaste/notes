@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import MapKit
 
 @objc protocol AttachmentCellDelegate : NSObjectProtocol {
     func openSelectedAttachment(collectionViewItem : NSCollectionViewItem)
@@ -26,12 +27,25 @@ extension Document : AttachmentCellDelegate {
         self.autosaveWithImplicitCancellability(false, completionHandler: {
             (error) -> Void in
             
-            var url = self.fileURL
-            url = url?.URLByAppendingPathComponent(NoteDocumentFileNames.AttachmentsDirectory.rawValue, isDirectory: true)
-            url = url?.URLByAppendingPathComponent(attachment.preferredFilename!)
+            if attachment.conformsToType(kUTTypeJSON),
+            let data = attachment.regularFileContents,
+                let json = try? NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions()) as? NSDictionary {
+                if let lat = json?["lat"] as? CLLocationDegrees,
+                    let lon = json?["long"] as? CLLocationDegrees {
+                    let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+                    let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: nil)
+                    let mapItem = MKMapItem(placemark: placemark)
+                    mapItem.openInMapsWithLaunchOptions(nil)
+                }
+            } else {
             
-            if let path = url?.path {
-                NSWorkspace.sharedWorkspace().openFile(path, withApplication: nil, andDeactivate: true)
+                var url = self.fileURL
+                url = url?.URLByAppendingPathComponent(NoteDocumentFileNames.AttachmentsDirectory.rawValue, isDirectory: true)
+                url = url?.URLByAppendingPathComponent(attachment.preferredFilename!)
+                
+                if let path = url?.path {
+                    NSWorkspace.sharedWorkspace().openFile(path, withApplication: nil, andDeactivate: true)
+                }
             }
         })
     }
@@ -90,6 +104,32 @@ extension Document : AddAttachmentDelegate {
     }
 }
 
+extension Document : NSCollectionViewDelegate {
+  
+    func collectionView(collectionView: NSCollectionView, validateDrop draggingInfo: NSDraggingInfo, proposedIndexPath proposedDropIndexPath: AutoreleasingUnsafeMutablePointer<NSIndexPath?>, dropOperation proposedDropOperation: UnsafeMutablePointer<NSCollectionViewDropOperation>) -> NSDragOperation {
+        return NSDragOperation.Copy
+    }
+    
+    func collectionView(collectionView: NSCollectionView, acceptDrop draggingInfo: NSDraggingInfo, indexPath: NSIndexPath, dropOperation: NSCollectionViewDropOperation) -> Bool {
+        
+        let pasteboard = draggingInfo.draggingPasteboard()
+        
+        
+        if pasteboard.types?.contains(NSURLPboardType) == true,
+            let url = NSURL(fromPasteboard: pasteboard) {
+            do {
+                try self.addAttachmentAtURL(url)
+                attachmentsList.reloadData()
+                return true
+            } catch let error as NSError {
+                self.presentError(error)
+                return false
+            }
+        }
+        return false
+    }
+}
+
 extension Document : NSCollectionViewDataSource {
     
     func collectionView(collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -115,6 +155,9 @@ enum NoteDocumentFileNames : String {
     // Names of files/directories in the package
     case TextFile = "Text.rtf"
     case AttachmentsDirectory = "Attachments"
+    case QuickLookDirectory = "QuickLook"
+    case QuickLookTextFile = "Preview.rtf"
+    case QuickLookThumbnail = "Thumbnail.png"
 }
 
 enum ErrorCode : Int {
@@ -183,12 +226,39 @@ class Document: NSDocument {
         // Add your subclass-specific initialization here.
     }
     
+    override func windowControllerDidLoadNib(windowController: NSWindowController) {
+        self.attachmentsList.registerForDraggedTypes([NSURLPboardType])
+    }
+    
     override func fileWrapperOfType(typeName: String) throws -> NSFileWrapper {
+        
         let textRTFData = try self.text.dataFromRange(NSRange(0..<self.text.length), documentAttributes: [NSDocumentTypeDocumentAttribute: NSRTFTextDocumentType])
+        
         if let oldTextFileWrapper = self.documentFileWrapper.fileWrappers?[NoteDocumentFileNames.TextFile.rawValue] {
             self.documentFileWrapper.removeFileWrapper(oldTextFileWrapper)
         }
+        
+        // Create the QuickLook folder
+        let thumbnailImageData = self.iconImageDataWithSize(CGSize(width: 512, height: 512))!
+        let thumbnailWrapper = NSFileWrapper(regularFileWithContents: thumbnailImageData)
+        
+        let quicklookPreview = NSFileWrapper(regularFileWithContents: textRTFData)
+        
+        let quickLookFolderFileWrapper =
+            NSFileWrapper(directoryWithFileWrappers: [
+            NoteDocumentFileNames.QuickLookTextFile.rawValue: quicklookPreview,
+            NoteDocumentFileNames.QuickLookThumbnail.rawValue: thumbnailWrapper])
+        
+        quickLookFolderFileWrapper.preferredFilename = NoteDocumentFileNames.QuickLookDirectory.rawValue
+        
+        if let oldQuickLookFolder = self.documentFileWrapper.fileWrappers?[NoteDocumentFileNames.QuickLookDirectory.rawValue] {
+            self.documentFileWrapper.removeFileWrapper(oldQuickLookFolder)
+        }
+        
+        self.documentFileWrapper.addFileWrapper(quickLookFolderFileWrapper)
+        
         self.documentFileWrapper.addRegularFileWithContents(textRTFData, preferredFilename: NoteDocumentFileNames.TextFile.rawValue)
+        
         return self.documentFileWrapper
     }
     
@@ -236,6 +306,39 @@ class Document: NSDocument {
             self.popover?.contentViewController = viewController
             self.popover?.showRelativeToRect(sender.bounds, ofView: sender, preferredEdge: NSRectEdge.MaxY)
         }
+    }
+    
+    func iconImageDataWithSize(size: CGSize) -> NSData? {
+        
+        let image = NSImage(size: size)
+        
+        image.lockFocus()
+        
+        let entireImageRect = CGRect(origin: CGPoint.zero, size: size)
+        
+        let backgroundRect = NSBezierPath(rect: entireImageRect)
+        NSColor.whiteColor().setFill()
+        backgroundRect.fill()
+        
+        if self.attachedFiles?.count >= 1 {
+            let attachmentImage = self.attachedFiles?[0].thumbnailImage
+            
+            var firstHalf : CGRect = CGRectZero
+            var secondHalf : CGRect = CGRectZero
+            
+            CGRectDivide(entireImageRect, &firstHalf, &secondHalf, entireImageRect.size.height, CGRectEdge.MinYEdge)
+            
+            self.text.drawInRect(firstHalf)
+            attachmentImage?.drawInRect(secondHalf)
+        } else {
+            self.text.drawInRect(entireImageRect)
+        }
+        
+        let bitmapRepresentation = NSBitmapImageRep(focusedViewRect: entireImageRect)
+        
+        image.unlockFocus()
+        
+        return bitmapRepresentation?.representationUsingType(.NSPNGFileType, properties: [:])
     }
     
     override var windowNibName: String? {
