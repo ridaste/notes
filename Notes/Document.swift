@@ -8,6 +8,35 @@
 
 import Cocoa
 
+@objc protocol AttachmentCellDelegate : NSObjectProtocol {
+    func openSelectedAttachment(collectionViewItem : NSCollectionViewItem)
+}
+
+extension Document : AttachmentCellDelegate {
+    func openSelectedAttachment(collectionItem: NSCollectionViewItem) {
+        
+        guard let selectedIndex = self.attachmentsList.indexPathForItem(collectionItem)?.item else {
+            return
+        }
+        
+        guard let attachment = self.attachedFiles?[selectedIndex] else {
+            return
+        }
+        
+        self.autosaveWithImplicitCancellability(false, completionHandler: {
+            (error) -> Void in
+            
+            var url = self.fileURL
+            url = url?.URLByAppendingPathComponent(NoteDocumentFileNames.AttachmentsDirectory.rawValue, isDirectory: true)
+            url = url?.URLByAppendingPathComponent(attachment.preferredFilename!)
+            
+            if let path = url?.path {
+                NSWorkspace.sharedWorkspace().openFile(path, withApplication: nil, andDeactivate: true)
+            }
+        })
+    }
+}
+
 extension NSFileWrapper {
     
     dynamic var fileExtension : String? {
@@ -75,6 +104,8 @@ extension Document : NSCollectionViewDataSource {
         
         item.imageView?.image = attachment.thumbnailImage
         item.textField?.stringValue = attachment.fileExtension ?? ""
+        
+        item.delegate = self
         
         return item
     }
