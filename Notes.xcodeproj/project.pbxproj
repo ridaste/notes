@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC62D1D61CFE423F006F5BA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC62D1D51CFE423F006F5BA0 /* AppDelegate.swift */; };
+		EC62D1D81CFE423F006F5BA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC62D1D71CFE423F006F5BA0 /* ViewController.swift */; };
+		EC62D1DB1CFE423F006F5BA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC62D1D91CFE423F006F5BA0 /* Main.storyboard */; };
+		EC62D1DD1CFE423F006F5BA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC62D1DC1CFE423F006F5BA0 /* Assets.xcassets */; };
+		EC62D1E01CFE423F006F5BA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC62D1DE1CFE423F006F5BA0 /* LaunchScreen.storyboard */; };
+		EC62D1EB1CFE423F006F5BA0 /* Notes_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC62D1EA1CFE423F006F5BA0 /* Notes_iOSTests.swift */; };
+		EC62D1F61CFE423F006F5BA0 /* Notes_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC62D1F51CFE423F006F5BA0 /* Notes_iOSUITests.swift */; };
 		EC63B6901CF6CAFF00975571 /* AttachmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC63B68E1CF6CAFF00975571 /* AttachmentCell.swift */; };
 		EC63B6911CF6CAFF00975571 /* AttachmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC63B68F1CF6CAFF00975571 /* AttachmentCell.xib */; };
 		ECC1711D1CF5B01600ECAADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1711C1CF5B01600ECAADA /* AppDelegate.swift */; };
@@ -21,6 +28,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EC62D1E71CFE423F006F5BA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECC171111CF5B01600ECAADA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC62D1D21CFE423F006F5BA0;
+			remoteInfo = "Notes-iOS";
+		};
+		EC62D1F21CFE423F006F5BA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECC171111CF5B01600ECAADA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC62D1D21CFE423F006F5BA0;
+			remoteInfo = "Notes-iOS";
+		};
 		ECC1712E1CF5B01600ECAADA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ECC171111CF5B01600ECAADA /* Project object */;
@@ -38,7 +59,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC19EB541CFE455400197FDB /* Notes-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Notes-iOS.entitlements"; sourceTree = "<group>"; };
 		EC62D1CE1CFD9EC7006F5BA0 /* Notes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Notes.entitlements; sourceTree = "<group>"; };
+		EC62D1D31CFE423F006F5BA0 /* Notes-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Notes-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC62D1D51CFE423F006F5BA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EC62D1D71CFE423F006F5BA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC62D1DA1CFE423F006F5BA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC62D1DC1CFE423F006F5BA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC62D1DF1CFE423F006F5BA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC62D1E11CFE423F006F5BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC62D1E61CFE423F006F5BA0 /* Notes-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Notes-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC62D1EA1CFE423F006F5BA0 /* Notes_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes_iOSTests.swift; sourceTree = "<group>"; };
+		EC62D1EC1CFE423F006F5BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC62D1F11CFE423F006F5BA0 /* Notes-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Notes-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC62D1F51CFE423F006F5BA0 /* Notes_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes_iOSUITests.swift; sourceTree = "<group>"; };
+		EC62D1F71CFE423F006F5BA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC63B68E1CF6CAFF00975571 /* AttachmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentCell.swift; sourceTree = "<group>"; };
 		EC63B68F1CF6CAFF00975571 /* AttachmentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AttachmentCell.xib; sourceTree = "<group>"; };
 		ECC171191CF5B01600ECAADA /* Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +94,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EC62D1D01CFE423F006F5BA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC62D1E31CFE423F006F5BA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC62D1EE1CFE423F006F5BA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECC171161CF5B01600ECAADA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,12 +139,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC62D1D41CFE423F006F5BA0 /* Notes-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EC19EB541CFE455400197FDB /* Notes-iOS.entitlements */,
+				EC62D1D51CFE423F006F5BA0 /* AppDelegate.swift */,
+				EC62D1D71CFE423F006F5BA0 /* ViewController.swift */,
+				EC62D1D91CFE423F006F5BA0 /* Main.storyboard */,
+				EC62D1DC1CFE423F006F5BA0 /* Assets.xcassets */,
+				EC62D1DE1CFE423F006F5BA0 /* LaunchScreen.storyboard */,
+				EC62D1E11CFE423F006F5BA0 /* Info.plist */,
+			);
+			path = "Notes-iOS";
+			sourceTree = "<group>";
+		};
+		EC62D1E91CFE423F006F5BA0 /* Notes-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC62D1EA1CFE423F006F5BA0 /* Notes_iOSTests.swift */,
+				EC62D1EC1CFE423F006F5BA0 /* Info.plist */,
+			);
+			path = "Notes-iOSTests";
+			sourceTree = "<group>";
+		};
+		EC62D1F41CFE423F006F5BA0 /* Notes-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EC62D1F51CFE423F006F5BA0 /* Notes_iOSUITests.swift */,
+				EC62D1F71CFE423F006F5BA0 /* Info.plist */,
+			);
+			path = "Notes-iOSUITests";
+			sourceTree = "<group>";
+		};
 		ECC171101CF5B01600ECAADA = {
 			isa = PBXGroup;
 			children = (
 				ECC1711B1CF5B01600ECAADA /* Notes */,
 				ECC171301CF5B01600ECAADA /* NotesTests */,
 				ECC1713B1CF5B01600ECAADA /* NotesUITests */,
+				EC62D1D41CFE423F006F5BA0 /* Notes-iOS */,
+				EC62D1E91CFE423F006F5BA0 /* Notes-iOSTests */,
+				EC62D1F41CFE423F006F5BA0 /* Notes-iOSUITests */,
 				ECC1711A1CF5B01600ECAADA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,6 +190,9 @@
 				ECC171191CF5B01600ECAADA /* Notes.app */,
 				ECC1712D1CF5B01600ECAADA /* NotesTests.xctest */,
 				ECC171381CF5B01600ECAADA /* NotesUITests.xctest */,
+				EC62D1D31CFE423F006F5BA0 /* Notes-iOS.app */,
+				EC62D1E61CFE423F006F5BA0 /* Notes-iOSTests.xctest */,
+				EC62D1F11CFE423F006F5BA0 /* Notes-iOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +236,59 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EC62D1D21CFE423F006F5BA0 /* Notes-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC62D1FE1CFE423F006F5BA0 /* Build configuration list for PBXNativeTarget "Notes-iOS" */;
+			buildPhases = (
+				EC62D1CF1CFE423F006F5BA0 /* Sources */,
+				EC62D1D01CFE423F006F5BA0 /* Frameworks */,
+				EC62D1D11CFE423F006F5BA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Notes-iOS";
+			productName = "Notes-iOS";
+			productReference = EC62D1D31CFE423F006F5BA0 /* Notes-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC62D1E51CFE423F006F5BA0 /* Notes-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC62D1FF1CFE423F006F5BA0 /* Build configuration list for PBXNativeTarget "Notes-iOSTests" */;
+			buildPhases = (
+				EC62D1E21CFE423F006F5BA0 /* Sources */,
+				EC62D1E31CFE423F006F5BA0 /* Frameworks */,
+				EC62D1E41CFE423F006F5BA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC62D1E81CFE423F006F5BA0 /* PBXTargetDependency */,
+			);
+			name = "Notes-iOSTests";
+			productName = "Notes-iOSTests";
+			productReference = EC62D1E61CFE423F006F5BA0 /* Notes-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EC62D1F01CFE423F006F5BA0 /* Notes-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC62D2001CFE423F006F5BA0 /* Build configuration list for PBXNativeTarget "Notes-iOSUITests" */;
+			buildPhases = (
+				EC62D1ED1CFE423F006F5BA0 /* Sources */,
+				EC62D1EE1CFE423F006F5BA0 /* Frameworks */,
+				EC62D1EF1CFE423F006F5BA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC62D1F31CFE423F006F5BA0 /* PBXTargetDependency */,
+			);
+			name = "Notes-iOSUITests";
+			productName = "Notes-iOSUITests";
+			productReference = EC62D1F11CFE423F006F5BA0 /* Notes-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		ECC171181CF5B01600ECAADA /* Notes */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECC171411CF5B01600ECAADA /* Build configuration list for PBXNativeTarget "Notes" */;
@@ -205,6 +352,23 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Ridaste Software Enterprises";
 				TargetAttributes = {
+					EC62D1D21CFE423F006F5BA0 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8TPZG7XUMQ;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+					EC62D1E51CFE423F006F5BA0 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = EC62D1D21CFE423F006F5BA0;
+					};
+					EC62D1F01CFE423F006F5BA0 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = EC62D1D21CFE423F006F5BA0;
+					};
 					ECC171181CF5B01600ECAADA = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 8TPZG7XUMQ;
@@ -240,11 +404,38 @@
 				ECC171181CF5B01600ECAADA /* Notes */,
 				ECC1712C1CF5B01600ECAADA /* NotesTests */,
 				ECC171371CF5B01600ECAADA /* NotesUITests */,
+				EC62D1D21CFE423F006F5BA0 /* Notes-iOS */,
+				EC62D1E51CFE423F006F5BA0 /* Notes-iOSTests */,
+				EC62D1F01CFE423F006F5BA0 /* Notes-iOSUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EC62D1D11CFE423F006F5BA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC62D1E01CFE423F006F5BA0 /* LaunchScreen.storyboard in Resources */,
+				EC62D1DD1CFE423F006F5BA0 /* Assets.xcassets in Resources */,
+				EC62D1DB1CFE423F006F5BA0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC62D1E41CFE423F006F5BA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC62D1EF1CFE423F006F5BA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECC171171CF5B01600ECAADA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,6 +465,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EC62D1CF1CFE423F006F5BA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC62D1D81CFE423F006F5BA0 /* ViewController.swift in Sources */,
+				EC62D1D61CFE423F006F5BA0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC62D1E21CFE423F006F5BA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC62D1EB1CFE423F006F5BA0 /* Notes_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC62D1ED1CFE423F006F5BA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC62D1F61CFE423F006F5BA0 /* Notes_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECC171151CF5B01600ECAADA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -304,6 +520,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EC62D1E81CFE423F006F5BA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC62D1D21CFE423F006F5BA0 /* Notes-iOS */;
+			targetProxy = EC62D1E71CFE423F006F5BA0 /* PBXContainerItemProxy */;
+		};
+		EC62D1F31CFE423F006F5BA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC62D1D21CFE423F006F5BA0 /* Notes-iOS */;
+			targetProxy = EC62D1F21CFE423F006F5BA0 /* PBXContainerItemProxy */;
+		};
 		ECC1712F1CF5B01600ECAADA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = ECC171181CF5B01600ECAADA /* Notes */;
@@ -317,6 +543,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		EC62D1D91CFE423F006F5BA0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC62D1DA1CFE423F006F5BA0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC62D1DE1CFE423F006F5BA0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC62D1DF1CFE423F006F5BA0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		ECC171201CF5B01600ECAADA /* Document.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -336,6 +578,99 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EC62D1F81CFE423F006F5BA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Notes-iOS/Notes-iOS.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Notes-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.rse.Notes-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC62D1F91CFE423F006F5BA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Notes-iOS/Notes-iOS.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Notes-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.rse.Notes-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC62D1FA1CFE423F006F5BA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Notes-iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.rse.Notes-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Notes-iOS.app/Notes-iOS";
+			};
+			name = Debug;
+		};
+		EC62D1FB1CFE423F006F5BA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Notes-iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.rse.Notes-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Notes-iOS.app/Notes-iOS";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC62D1FC1CFE423F006F5BA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Notes-iOSUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.rse.Notes-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_TARGET_NAME = "Notes-iOS";
+			};
+			name = Debug;
+		};
+		EC62D1FD1CFE423F006F5BA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Notes-iOSUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.rse.Notes-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_TARGET_NAME = "Notes-iOS";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		ECC1713F1CF5B01600ECAADA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -503,6 +838,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EC62D1FE1CFE423F006F5BA0 /* Build configuration list for PBXNativeTarget "Notes-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC62D1F81CFE423F006F5BA0 /* Debug */,
+				EC62D1F91CFE423F006F5BA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC62D1FF1CFE423F006F5BA0 /* Build configuration list for PBXNativeTarget "Notes-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC62D1FA1CFE423F006F5BA0 /* Debug */,
+				EC62D1FB1CFE423F006F5BA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC62D2001CFE423F006F5BA0 /* Build configuration list for PBXNativeTarget "Notes-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC62D1FC1CFE423F006F5BA0 /* Debug */,
+				EC62D1FD1CFE423F006F5BA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		ECC171141CF5B01600ECAADA /* Build configuration list for PBXProject "Notes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

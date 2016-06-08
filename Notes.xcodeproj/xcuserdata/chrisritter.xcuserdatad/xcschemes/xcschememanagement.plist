@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Notes-iOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Notes.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,21 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>EC62D1D21CFE423F006F5BA0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC62D1E51CFE423F006F5BA0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC62D1F01CFE423F006F5BA0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>ECC171181CF5B01600ECAADA</key>
 		<dict>
 			<key>primary</key>
